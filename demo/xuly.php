@@ -1,5 +1,4 @@
 <?php
-
 // Nếu không phải là sự kiện đăng ký thì không xử lý
 if (!isset($_POST['txtUsername'])) {
     die('');
@@ -68,7 +67,7 @@ $stmt->execute([$username, $password, $email, $fullname, $birthday, $sex]);
 
 // Thông báo quá trình lưu
 if ($stmt->rowCount() > 0) {
-    echo "Quá trình đăng ký thành công. <a href='/'>Về trang chủ</a>";
+    echo "Quá trình đăng ký thành công. <a href='dangnhap.php'>ĐĂNG NHẬP</a>";
 } else {
     echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='dangky.php'>Thử lại</a>";
 }

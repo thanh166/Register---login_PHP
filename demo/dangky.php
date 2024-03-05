@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -64,6 +65,7 @@
             </table>
             <input type="submit" value="Đăng ký" />
             <input type="reset" value="Nhập lại" />
+            <a href="dangnhap.php" title="Đăng nhập">Đã có tài khoản. Đăng nhập</a>
         </form>
     </body>
 </html>

@@ -37,38 +37,88 @@ if (isset($_POST['dangnhap'])) {
 
     // Lưu tên đăng nhập
     $_SESSION['username'] = $username;
-    echo "Xin chào " . $username . ". Bạn đã đăng nhập thành công. <a href='/'>Về trang chủ</a>";
+    echo "Xin chào " . $username . ". Bạn đã đăng nhập thành công. <a href='trangchu.php'>Về trang chủ</a>";
     die();
 }
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-        <form action='dangnhap.php?do=login' method='POST'>
-            <table cellpadding='0' cellspacing='0' border='1'>
-                <tr>
-                    <td>
-                        Tên đăng nhập :
-                    </td>
-                    <td>
-                        <input type='text' name='txtUsername' />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Mật khẩu :
-                    </td>
-                    <td>
-                        <input type='password' name='txtPassword' />
-                    </td>
-                </tr>
-            </table>
-            <input type='submit' name="dangnhap" value='Đăng nhập' />
-            <a href='dangky.php' title='Đăng ký'>Đăng ký</a>
-        </form>
-    </body>
+  <head>
+    <title>Đăng nhập</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0; 
+        padding-top: 100px;
+        max-width: 40%;
+        padding-left: 30%; 
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px; 
+        }
+
+      table {
+        border-collapse: collapse;
+        width: 100%; 
+      }
+
+      th, td {
+        padding: 10px; 
+        border: 1px solid #ddd; 
+        text-align: left; 
+      }
+
+      th {
+        background-color: #f2f2f2; 
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%; 
+        padding: 5px; 
+        border: 1px solid #ccc; 
+      }
+
+      input[type="submit"] {
+        background-color: #4CAF50; 
+        color: white;
+        padding: 10px 20px; 
+        border: none; 
+        border-radius: 4px;
+        cursor: pointer; 
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      a {
+        color: #000; 
+        text-decoration: none; 
+      }
+
+      a:hover {
+        color: #c0c0c0; 
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TRANG ĐĂNG NHẬP</h1>
+    <form action="dangnhap.php?do=login" method="POST">
+      <table>
+        <tr>
+          <th>Tên đăng nhập:</th>
+          <td><input type="text" name="txtUsername" /></td>
+        </tr>
+        <tr>
+          <th>Mật khẩu:</th>
+          <td><input type="password" name="txtPassword" /></td>
+        </tr>
+      </table>
+      <input type="submit" name="dangnhap" value="Đăng nhập" />
+      <a href="dangky.php" title="Đăng ký">Đăng ký</a>
+    </form>
+  </body>
 </html>
